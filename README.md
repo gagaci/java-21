@@ -1,20 +1,12 @@
 
-# Learning kotlin & android
+# java-21
 
-I will be building my first android app in kotlin and sharing the progress in this in this repository.
+In this repository I will be experementing new features of java. Meanwhile, leaving my opinion on comment section
 
 
 ## Resource
 
- - [Google's android course](https://developer.android.com/courses)
- - [Philipp Lackner](https://www.youtube.com/@PhilippLackner)
-
-## Lessons Learned
-
-coming soon
-
-
-
+ - [Java](https://openjdk.org/projects/jdk/21/)
 
 ## 📜 License
 
