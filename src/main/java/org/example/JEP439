@@ -1,0 +1,15 @@
+
+    Before JDK 21, GC used to scan whole heap whether the objects are young or old, it didn't matter
+    with JEP 439, GC was made generational, meaning the heap was divided into two parts YOUNG and OLD.
+    As most objects die young, so scanning them is more beneficial then scanning old ones.
+    By doing that we achieve
+    * Reduced CPU Overhead, as by frequently scanning we terminate young objects freeing up CPU for old ones
+    * Lower Risk of "Allocation Stalls": Since it reclaims memory from young objects more aggressively,
+     the application is less likely to run out of memory before the next GC cycle finishes.
+
+    * Smaller Heap Footprint: It can often run efficiently with a smaller total heap size than the original ZGC.
+
+    * Consistent Low Latency: It maintains the ZGC promise of sub-millisecond pause times, even as heap sizes scale into the terabytes.
+
+    HOW TO USE IT
+    java -XX:+UseZGC -XX:+ZGenerational ...
